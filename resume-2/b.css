@@ -1,0 +1,37 @@
+body{
+  background-color: rgb(239,228, 176)
+}
+.topNavBar nav ul>li{
+  float: left;
+  margin-left: 15px;
+  font-size: 96px;
+  font-family: "Open Sans Extrabold"
+}
+.topNavBar span{
+  float: left;
+  font-size: 112px;
+  font-weight: bold;
+  color: rgb(153, 217,234);
+  font-family: "Open Sans Extrabold"
+}
+.topNavBar nav ul{
+  list-style: none;
+}
+.topNavBar nav ul a{
+  text-decoration: none;
+  color: rgb(153, 217,234)
+}
+.topNavBar nav{
+  float: right
+}
+.topNavBar nav ul li a:hover{  
+  border-bottom-color: #DC6465;
+}
+.topNavBar nav ul li a{
+  border-bottom: 3px solid transparent;
+}
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
