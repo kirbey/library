@@ -13,6 +13,7 @@ hr{
   height: 0;
   border: none;
   border-top: 1px solid #DEDEDE;
+  padding: 20px 0;
 }
 .clearfix::after{
   content: '';
@@ -119,7 +120,7 @@ hr{
   padding: 50px;
 }
 .userCard .text h2{
-  padding: 20px 0px;
+  padding: 0 20px;
 }
 .userCard dl dt,
 .userCard dl dd{
