@@ -9,7 +9,7 @@
   border-radius: 100%;
   position: relative;
 }
-.yin-yang::before{
+.yin-yang:before{
   content: "";
   position: absolute;
   top: 50%;
