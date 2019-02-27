@@ -13,7 +13,10 @@ a{
 }
 /*上面不要看*/
 .topNavBar {
-  padding: 20px 16px 28px 16px
+  padding: 20px 16px 28px 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .topNavBar .logo {
   font-family: "Aeial Black";
@@ -55,4 +58,7 @@ a{
 }
 .topNavBar nav ul>li>a:hover{
   border-bottom-color: #DC6465;
+}
+.banner{
+  height: 515px;
 }
