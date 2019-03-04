@@ -23,16 +23,58 @@ kbd > button{
 kbd:hover > button{
   display: inline-block;
 }
+body{
+  background: grey url(wh.jpg) no-repeat center center;
+  background-size: cover;
+}
 main{
   text-align: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-#mainxxx{
+#main{
   display: inline-block;
 }
-#mainxxx > div:nth-child(2){
-  margin-left: 2em;
+#main > div:nth-child(2){
+  margin-left: -22px;
 }
-#mainxxx > div:nth-child(3){
-  margin-left: 4em;
+#main > div:nth-child(3){
+  margin-left: -80px;
+}
+.key{
+  width: 70px;
+  height: 60px;
+  background: linear-gradient(to bottom, #292929 0%,#111111 100%);
+  border: 1px solid #373737;
+  color: #c5c5c5;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #1a1b1c,0 0 0 2px #1f2020,0 2px 0 1px #080808;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+.row{
+  margin: 20px;
+}
+.row .key{
+  margin: 0 10px;
+}
+.wrapper{
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 20px;
+}
+.key img{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 4px;
+  bottom: 2px;
+}
+.key .text{
+  position: absolute;
+  left: 4px;
+  top: 2px;
 }
