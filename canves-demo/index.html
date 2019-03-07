@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我的画板</title>
   <style>
@@ -15,16 +15,29 @@
     body{
       margin: 0px;
     }
-    button{
+    .actions{
       position: fixed;
       bottom: 0;
       left: 0;
+    }
+    .actions > #brush{
+      display: none;
+    }
+    .actions.x >#brush{
+      display: inline-block;
+    }
+    .actions.x > #eraser{
+      display: none;
     }
   </style>
 </head>
 <body>
   <canvas id="xxx"></canvas>
-  <button id="eraser">橡皮擦</button>
+  <div id="actions" class="actions">
+      <button id="eraser">橡皮擦</button>
+      <button id="brush">画笔</button>
+  </div>
+
   <script src="main.js"></script>
 </body>
 </html>
