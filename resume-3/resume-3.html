@@ -82,7 +82,7 @@
     <div class="mask"></div>
   </div>
   <main>
-    <div id="siteAbout" class="userCard">
+    <div data-x id="siteAbout" class="userCard">
       <div class="pictureAndText clearfix">
         <div class="picture">
           <img src="567.jpg" width=299 height=347 alt="头像">
@@ -133,7 +133,7 @@
     </p>
 
   </main>
-  <section id="siteSkills" class="skills">
+  <section data-x id="siteSkills" class="skills">
     <h2>技能</h2>
     <ol class="clearfix">
       <li>
@@ -180,7 +180,7 @@
         </li>
     </ol>
   </section>
-  <section id="siteWorks" class="portfolio">
+  <section data-x id="siteWorks" class="portfolio">
     <h2>作品集</h2>
     <nav>
       <ol class="clearfix">
@@ -217,6 +217,7 @@
     </div>
 
   </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
   <script>
     setTimeout(function(){
       siteWelcome.classList.remove('active')
@@ -247,7 +248,36 @@ for(let i=0; i<aTags.length; i++){
     let href = a.getAttribute('href')
     let element = document.querySelector(href)
     let top = element.offsetTop
-    window.scrollTo(0, top - 80)
+    //let top = document.querySelector(x.currentTarget.getAttribute('herf')).offsetTop
+    let n = 25 //一共动多少次
+    let duration = 500 / n 
+    let currentTop = window.scrollY
+    let targetTop = top - 80 
+    let distance = (targetTop - currentTop)/ n
+    let i = 0
+    let id = setInterval(()=> {
+      if ( i === n){
+        window.clearInterval(id)
+        return
+      }
+      i = i + 1
+      window.scrollTo(0, currentTop + distance * i)
+    }, duration)
+    /*    
+    let currentTop = window.scrollY
+    let targetTop = top - 80
+    let s = targetTop - currentTop
+    var coords = { y : currentTop};
+    var t = Math.abs((s/100)*300)
+    if (t>500){ t = 500}
+    var tween = new TWEEN.Tween(coords)
+      .to( {y: targetTop} , t)
+      .easing(TWEEN.Easing.Cubic.InOut)
+      .onUpdate(function() {
+        window.scrollTo(0,coords.y)
+      })
+      .start();
+      */
   }
 }
   </script>
