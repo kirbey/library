@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <style>
+    .images{
+      display:flex;
+      align-items: flex-start;
+      transition: transform 0.5s;
+    }
+    .images > img{
+      vertical-align: top;
+    }
+    .window{
+      width: 300px;
+      overflow: hidden;
+    }
+    .red{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="window">
+      <div class="images" id=images>
+          <img src="https://fthmb.tqn.com/0ui_Zw01Ht9NHJkSBlqOIC1IH44=/960x0/filters:no_upscale()/yorkshire-terrier-583788122-581630e85f9b581c0b018a00.jpg" alt="图片1" width="300" height="200">
+          <img src="https://canna-pet.com/wp-content/uploads/2017/06/20-longest-living-dog-breeds_canna-pet-e1498599846169.jpg" alt="图片2" width="300" height="200">
+          <img src="https://fthmb.tqn.com/0ui_Zw01Ht9NHJkSBlqOIC1IH44=/960x0/filters:no_upscale()/yorkshire-terrier-583788122-581630e85f9b581c0b018a00.jpg" width="300" alt="图片3" height="200">
+          <img src="https://canna-pet.com/wp-content/uploads/2017/06/20-longest-living-dog-breeds_canna-pet-e1498599846169.jpg" width=300 alt="图片4" height=200>
+        </div>
+  </div>
+  <span id="buttons">
+    <span >第1张</span>
+    <span >第2张</span>
+    <span >第3张</span>
+    <span >第4张</span>
+  </span>
+  <script>
+    var allButtons = $('#buttons > span')
+    for(let i=0; i<allButtons.length; i++){
+      $(allButtons[i]).on('click',function(x){
+        var index = $(x.currentTarget).index()
+        var n = index * -300
+        $('#images').css({
+          transform: 'translate(' + n + 'px)'
+        })
+      })
+    }
+    var n = 0;
+    var size = allButtons.length
+    allButtons.eq(n%size).trigger('click')
+      .addClass('red')
+      .siblings('.red').removeClass('red')
+    var timeId = setInterval(()=>{
+      n += 1
+      allButtons.eq(n%size).trigger('click')
+        .addClass('red')
+        .siblings('.red').removeClass('red')
+    },1000)
+    $('.window').on('mouseenter', function(){
+      window.clearInterval(timeId)
+    })
+    $('.window').on('mouseleave', function(){
+      timeId = setInterval(()=>{
+        n += 1
+        allButtons.eq(n%size).trigger('click')
+          .addClass('red')
+          .siblings('.red').removeClass('red')
+      },1000)
+    })
+    /*
+    $(p1).on('click',function(){
+      $(images).css({
+       transform: 'translateX(0)'
+      })
+    })
+    $(p2).on('click',function(){
+      $(images).css({
+        transform: 'translateX(-300px)'
+      })
+    })
+    $(p3).on('click',function(){
+      $(images).css({
+        transform: 'translateX(-600px)'
+     })
+    })
+    $(p4).on('click',function(){
+      $(images).css({
+        transform: 'translateX(-900px)'
+     })
+    })
+    */
+  </script>    
+</body>
+</html>
