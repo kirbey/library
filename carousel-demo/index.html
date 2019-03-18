@@ -49,22 +49,23 @@
           transform: 'translate(' + p + 'px)'
         })
         n = index
-        allButtons.eq(n)
-          .addClass('red')
-          .siblings('.red').removeClass('red')
+        activeButton(allButtons.eq(n))
       })
     }
     var n = 0;
     var size = allButtons.length
     allButtons.eq(n%size).trigger('click')
-      .addClass('red')
-      .siblings('.red').removeClass('red')
+    activeButton(allButtons.eq(n %size))
     var timeId = setInterval(()=>{
       n += 1
       allButtons.eq(n%size).trigger('click')
+      activeButton(allButtons.eq(n %size))
+    },1000)
+    function activeButton($button){
+      $button
         .addClass('red')
         .siblings('.red').removeClass('red')
-    },1000)
+    }
     $('.window').on('mouseenter', function(){
       window.clearInterval(timeId)
     })
