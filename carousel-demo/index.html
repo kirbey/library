@@ -54,13 +54,19 @@
     }
     var n = 0;
     var size = allButtons.length
-    allButtons.eq(n%size).trigger('click')
-    activeButton(allButtons.eq(n %size))
-    var timeId = setInterval(()=>{
-      n += 1
-      allButtons.eq(n%size).trigger('click')
-      activeButton(allButtons.eq(n %size))
-    },1000)
+    playSlide(n%size)
+    var timeId = setTimeer()
+
+    function setTimeer(){
+      return  setInterval(()=>{
+        n += 1
+        playSlide(n%size)
+      },3000)
+    }
+
+    function playSlide(index){
+      allButtons.eq(index).trigger('click')
+    }
     function activeButton($button){
       $button
         .addClass('red')
@@ -70,12 +76,7 @@
       window.clearInterval(timeId)
     })
     $('.window').on('mouseleave', function(){
-      timeId = setInterval(()=>{
-        n += 1
-        allButtons.eq(n%size).trigger('click')
-          .addClass('red')
-          .siblings('.red').removeClass('red')
-      },1000)
+      timeId = setTimeer()
     })
     /*
     $(p1).on('click',function(){
