@@ -23,5 +23,5 @@ function x(n){
 function 初始化(){
   n = 1
   $(`.images > img:nth-child(1)`).addClass('current')
-    .siblings().addClass('enter')
+  .siblings().addClass('enter')
 }
