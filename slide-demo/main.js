@@ -1,5 +1,5 @@
 let n
-初始化()
+fn()
 setInterval(() =>{
   $(`.images > img:nth-child(${x(n)})`).removeClass('current enter').addClass('leave')
     .one('transitionend', (e)=>{
@@ -20,8 +20,8 @@ function x(n){
   return n
 }
 
-function 初始化(){
+function fn(){
   n = 1
   $(`.images > img:nth-child(1)`).addClass('current')
-  .siblings().addClass('enter')
+    .siblings().addClass('enter')
 }
