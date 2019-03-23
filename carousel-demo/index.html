@@ -7,6 +7,10 @@
   <title>轮播</title>
   <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
   <style>
+    *{
+      margin:0px;
+	    padding:0px;
+    }
     .images{
       display:flex;
       align-items: flex-start;
@@ -16,35 +20,73 @@
       vertical-align: top;
     }
     .window{
-      width: 300px;
+      width: 920px;
+      height: 400px;
       overflow: hidden;
+      text-align: center;
+      margin:15px auto;
+      margin-top: 25vh;
+      box-shadow: 0 0 3px #AAAAAA;
+      -moz-box-shadow:0 0 3px #AAAAAA;
+	    -webkit-box-shadow:0 0 3px #AAAAAA;
     }
     .red{
-      color: red;
+      
+    }
+    body{
+      color: #444444;
+      font-size: 13px;
+      background: #f2f2f2;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    .menu{
+      text-align: center;
+      height:35px;
+      padding-top:10px;
+      
+    }
+    span{
+      width:60px;
+      height:45px;
+      list-style:none;
+      padding-right: 40px;
+      padding-right: 40px;
+      margin-left: 40px;
     }
   </style>
 </head>
 <body>
   <div class="window">
       <div class="images" id=images>
-          <img src="dog1.jpg" alt="图片1" width="300" height="200">
-          <img src="dog2.jpg" alt="图片2" width="300" height="200">
-          <img src="dog1.jpg" width="300" alt="图片3" height="200">
-          <img src="dog2.jpg" width=300 alt="图片4" height=200>
+          <img src="iphone.jpg" alt="图片1" width="920" height="400">
+          <img src="macbook.jpg" alt="图片2" width="920" height="400">
+          <img src="imac.jpg" alt="图片3" width="920" height="400">
+          <img src="iphone.jpg" alt="图片4" width="920" height="400">
         </div>
   </div>
-  <span id="buttons">
-    <span >第1张</span>
-    <span >第2张</span>
-    <span >第3张</span>
-    <span >第4张</span>
-  </span>
+  <div class="menu">
+      <span id="buttons">
+          <span >
+            <img src="thumb1.png" alt="">
+          </span>
+          <span >
+            <img src="thumb2.png" alt="">
+          </span>
+          <span >
+            <img src="thumb3.png" alt="">
+          </span>
+          <span >
+            <img src="thumb4.png" alt="">
+          </span>
+        </span>
+  </div>
+
   <script>
     var allButtons = $('#buttons > span')
     for(let i=0; i<allButtons.length; i++){
       $(allButtons[i]).on('click',function(x){
         var index = $(x.currentTarget).index()
-        var p = index * -300
+        var p = index * -920
         $('#images').css({
           transform: 'translate(' + p + 'px)'
         })
