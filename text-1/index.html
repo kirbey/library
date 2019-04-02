@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div id="wrapper" class="wrapper">
+    <button id="clickMe">点击</button>
+    <div id="popover" class="popover">
+      浮层
+    </div>
+  </div>
+</body>
+<script>
+  clickMe.addEventListener('click',function(e){
+    if(popover.style.display === 'none'){
+      popover.style.display = 'block'
+      console.log(1)
+    }else{
+      popover.style.display = 'none'
+      console.log(2)  
+    }
+  })
+  wrapper.addEventListener('click',function(e){
+    e.stopPropagation()
+  })
+  document.addEventListener('click',function(){
+    popover.style.display = 'none'
+  })
+
+</script>
+</html>
