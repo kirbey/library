@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="loading.css">
   <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js"></script>
+  <script src="massage.js"></script>
   <style type="text/css">
     .icon {
        width: 1em; height: 1em;
@@ -217,6 +219,13 @@
     </div>
 
   </section>
+  <section>
+    <h2>留言</h2>
+    <form id="postMassage" style="width: 700px; margin: 50px auto;">
+      <input type="text" name="content">
+      <input type="submit" value="提交">
+    </form>
+  </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
   <script>
     setTimeout(function(){
@@ -281,6 +290,8 @@ for(let i=0; i<aTags.length; i++){
   }
 }
   </script>
+  
 </body>
+
 
 </html>
