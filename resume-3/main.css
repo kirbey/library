@@ -255,6 +255,7 @@ section.portfolio{
   margin-top: 60px;
 }
 section.skills > h2,
+section.message > h2,
 section.portfolio > h2{
   text-align: center;
   color: #3D4451;
@@ -349,4 +350,14 @@ section.portfolio .works{
 section.portfolio .works > .big,
 section.portfolio .works > .small {
   position: absolute;
+}
+
+section.message  > ol{
+  margin: 0 auto;
+  max-width: 800px;
+  border-top: 1px solid #ddd;
+}
+section.message > ol > li{
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
 }

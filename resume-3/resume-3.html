@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="loading.css">
   <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>
   <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <style type="text/css">
     .icon {
@@ -219,11 +220,14 @@
     </div>
 
   </section>
-  <section>
+  <section class="message">
     <h2>留言</h2>
     <ol id="messageList">
     </ol>
     <form id="postMessageForm" style="width: 700px; margin: 50px auto;">
+      <label for="">姓名</label>
+      <input type="text" name="name">
+      <label for="">留言</label>
       <input type="text" name="content">
       <input type="submit" value="提交">
     </form>
