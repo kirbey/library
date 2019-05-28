@@ -50,7 +50,7 @@
       )
     },
     bindEvents: function () {
-      this.form.addEventListener('submit', function (e) {
+      this.form.addEventListener('submit',  (e) => {
         e.preventDefault()
         this.saveMessages()
       })
@@ -59,14 +59,21 @@
       let myForm = this.form
       let content = myForm.querySelector('input[name=content]').value
       let name = myForm.querySelector('input[name=name]').value
-      this.model.save(name, content).then(function (object) {
-        let li = document.createElement('li')
-        li.innerText = `${object.attributes.name}: ${object.attributes.content}`
-        let messageList = document.querySelector('#messageList')
-        messageList.append(li)
-        myForm.querySelector('input[name=content]').value = ''
-        myForm.querySelector('input[name=name]').value = ''
+      if(content == ''){
+        return
+      }else if(name == ''){
+        return
+      }else{
+        this.model.save(name, content).then(function (object) {
+          let li = document.createElement('li')
+          li.innerText = `${object.attributes.name}: ${object.attributes.content}`
+          let messageList = document.querySelector('#messageList')
+          messageList.append(li)
+          myForm.querySelector('input[name=content]').value = ''
+          myForm.querySelector('input[name=name]').value = ''
       })
+      }
+
     }
   }
   controller.init(view, model)
