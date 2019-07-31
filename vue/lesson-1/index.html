@@ -11,6 +11,9 @@
   <div id="app">
     <p>{{ name }}</p>
     <p>{{ greet('afternoon') }}</p>
+    <input type="text" v-bind:value="name">
+    <a v-bind:href="website">百度</a>
+    <p v-html="websiteTag"></p>
   </div>
   <script src="app.js"></script>
 </body>
