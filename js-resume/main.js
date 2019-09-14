@@ -1,6 +1,19 @@
-var text = "html{color: red;}";
-var css = Prism.highlight(text, Prism.languages.css)
-console.log(css)
+function writeCode(code){
+    let domCode = document.querySelector('#code')
+    let n = 0 
+    let id = setInterval(() => {
+        n += 1 
+        domCode.innerHTML = Prism.highlight(code.substring(0 , n), Prism.languages.css)
+        styleTag.innerHTML = result.substring(0 , n)
+    },50)
+    if(n >= result.length){
+        window.clearInterval(id)
+    }
+}
+
+
+
+
 
 var result =  `
 /*
@@ -17,6 +30,9 @@ html{
     padding: 16px;
 }
 `
+
+writeCode(result)
+/*
 var n = 0
 
 var id = setInterval(() => {
@@ -30,7 +46,7 @@ var id = setInterval(() => {
         fn3(result)
     }
 },50)
-
+*/
 function fn2(){
     var paper = document.createElement('div')
     paper.id = 'paper'
