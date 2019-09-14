@@ -8,6 +8,7 @@ function writeCode(code){
     },50)
     if(n >= result.length){
         window.clearInterval(id)
+        fn.call()
     }
 }
 
@@ -31,7 +32,9 @@ html{
 }
 `
 
-writeCode(result)
+writeCode(result,() => {
+    fn2()
+})
 /*
 var n = 0
 
