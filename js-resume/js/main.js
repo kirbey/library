@@ -11,7 +11,7 @@ function writeCss(prefix, code, fn){
       window.clearInterval(id)
       fn && fn.call()
     }
-  }, 70)
+  }, 35)
 }
 function writeMarkdown(markdown, fn){
   let domPaper = document.querySelector('#paper>.content')
@@ -50,10 +50,15 @@ html{
 .token.selector{ color: #690; }
 .token.property{ color: #905; }
 
-/* 加一个呼吸效果 */
+/* 加一点特效 */
+#code-wrapper{
+  perspective: 1000px;
+}
 
 #code{
   animation: breath 0.5s infinite alternate-reverse;
+  transform: rotateY(10deg) translateZ(-100px) ;
+  -webkit-transform:rotateY(10deg) translateZ(-100px) ;
 }
 
 /* 现在正式开始 */
@@ -64,6 +69,7 @@ html{
   width: 50%; left: 0; position: fixed; 
   height: 100%;
 }
+
 
 #paper > .content {
  display: block;
@@ -84,68 +90,26 @@ var md = `
 # 自我介绍
 
 我叫 XXX
-1990 年 1 月出生
-XXX 学校毕业
+1992 年 10 月出生
+湖北文理学院毕业
 自学前端半年
 希望应聘前端开发岗位
 
 # 技能介绍
 
-熟悉 JavaScript CSS
+熟悉 JavaScript CSS VUE 
 
 # 项目介绍
 
-1. XXX 轮播
-2. XXX 简历
-3. XXX 画板
+1. 苹果风格轮播
+2. 自动写简历
+3. cavase画板
 
 # 联系方式
 
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
+- QQ 605464527
+- Email 605464527@qq.com 
+- 手机 17671173243
 `
 let css3 = `
 /*
