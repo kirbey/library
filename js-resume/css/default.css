@@ -17,7 +17,7 @@
 }
 #code{
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 #paper{
   background: #444; padding: 16px;
