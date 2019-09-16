@@ -361,13 +361,13 @@ section.portfolio .works > .small> img:hover{
 }
 section.portfolio .workLink > a{
   padding: 10px;
-  background: rgb(116, 115, 115);
+  background: #E6686A;
   margin-left: 30px;
-  color: #DEDEDE;
+  color: rgb(253, 251, 251);
   font-size: 2ch;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
-  border-radius: 5px; 
+  line-height: 1.2;
 }
 section.portfolio .workLink > a:hover{
   transition: all 0.5s;
