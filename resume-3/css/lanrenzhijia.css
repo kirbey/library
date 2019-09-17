@@ -1,0 +1,51 @@
+/* 代码整理：懒人之家 */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, img, dl, dt, dd, table, th, td, blockquote, fieldset, div, strong, label, em {
+	margin:0;
+	padding:0;
+	border:0;
+}
+ul, ol, li {
+	list-style:none;
+}
+input, button {
+	margin:0;
+	font-size:12px;
+	vertical-align:middle;
+}
+body {
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	margin:0 auto;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+a {
+	color:#333;
+	text-decoration:none;
+}
+.box-lanrenzhijia {
+	width:720px;
+	margin:20px auto;
+}
+.preview {
+	display:block;
+	float:left;
+	width:76px;
+	height:40px;
+	margin-left:50px;
+}
+.spic {
+	padding:2px;
+	border:1px solid #ccc;
+	display:block;
+	width:76px;
+	height:40px;
+}
+#preview {
+	border-radius:5px;
+	border:1px solid #ccc;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), 0 3px 4px rgba(0, 0, 0, 0.3);
+}

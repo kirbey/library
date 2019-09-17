@@ -3,11 +3,20 @@
 
 <head>
   <title>我的个人简历</title>
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="loading.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/loading.css">
   <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>
   <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="css/lanrenzhijia.css" type="text/css" /> -->
+  <script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+  <script type="text/javascript" src="js/lanrenzhijia.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+	    $("a.preview").preview();	  
+    });
+  </script>
 
   <style type="text/css">
     .icon {
@@ -87,14 +96,14 @@
       </nav>
     </div>
   </div>
-  <div class="banner" style="background-image: url(war.jpg);">
+  <div class="banner" style="background-image: url(img/war.jpg);">
     <div class="mask"></div>
   </div>
   <main>
     <div data-x id="siteAbout" class="userCard">
       <div class="pictureAndText clearfix">
         <div class="picture">
-          <img src="567.jpg" width=299 height=347 alt="头像">
+          <img src="img/567.jpg" width=299 height=347 alt="头像">
         </div>
         <div class="text">
           <span class="welcome">Hello
@@ -134,7 +143,7 @@
       </footer>
     </div>
     <p class="downloadResume-wrapper">
-      <a class="downloadResume" href="resume.pdf" target="_blank" download>下载 PDF 简历</a>
+      <a class="downloadResume" href="img/resume.pdf" target="_blank" download>下载 PDF 简历</a>
     </p>
     <p class="selfIntroduction">
       我， 资深前端学员，现在在 饥人谷 学前端课程。
@@ -215,19 +224,27 @@
 
     <div class="works" style="height: 597px;">
       <div class="big" style="top: 0;left: 0;">
-        <img title="多人共享博客" src="1.jpg" alt="作品1" id="bolg-client">
+        <img title="多人共享博客" src="img/1.jpg" alt="作品1" id="bolg-client">
       </div>
       <div class="small" style="top: 0; left: 645px;">
-        <img title="自动简历生成器" src="2.jpg" alt="作品2">
+        <img title="自动简历生成器" src="img/2.jpg" alt="作品2">
       </div>
       <div class="small" style="top: 298px; left: 645px;">
-        <img title="苹果风格轮播" src="3.jpg" alt="作品3">
+        <img title="苹果风格轮播" src="img/3.jpg" alt="作品3">
       </div>
     </div>
-    <div class="workLink">
-      <a title="Vue vue-router vue-cli" href="">多人共享博客</a>
-      <a title="原生JS" href="">自动简历生成器</a>
-      <a title="原生JS" href="">苹果风格轮播</a>
+<!--     <div class="workLink">
+      <a class="preview" title="Vue vue-router vue-cli" href="">多人共享博客<img class="spic" src="" alt=""></a>
+      <a class="preview" title="原生JS" href="">自动简历生成器<img class="spic" src="" alt=""></a>
+      <a class="preview" title="原生JS" href="">苹果风格轮播<img class="spic" src="" alt=""></a>
+    </div> -->
+    <div class="box-lanrenzhijia">
+      <div class="piclist">
+        <a class="preview" href="img/1.jpg" ><img class="spic" src="img/2.jpg" /></a>
+        <a class="preview" href="" ><img class="spic" src="" /></a>
+        <a class="preview" href="" ><img class="spic" src="" /></a>
+        <a class="preview" href="" ><img class="spic" src="" /></a>
+      </div>    
     </div>
 
   </section>
@@ -243,8 +260,9 @@
       <input type="submit" value="提交">
     </form>
   </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
-  <script src="message.js"></script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+  <script src="js/message.js"></script> -->
+  <script src="js/message.js"></script>
   <script>
     setTimeout(function(){
       siteWelcome.classList.remove('active')
@@ -307,7 +325,8 @@ for(let i=0; i<aTags.length; i++){
       */
   }
 }
-
+  var show = document.querySelector('.works > div > img')
+  console.log(show)
   </script>
   
 </body>

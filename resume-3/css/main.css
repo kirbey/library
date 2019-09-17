@@ -355,9 +355,11 @@ section.portfolio .works > .small {
 
 section.portfolio .works > .big > img:hover{
   transform: translateZ(50px);
+  transition: all 0.5s;
 }
 section.portfolio .works > .small> img:hover{
   transform: translateZ(50px);
+  transition: all 0.5s;
 }
 section.portfolio .workLink > a{
   padding: 10px;
@@ -382,4 +384,27 @@ section.message  > ol{
 section.message > ol > li{
   padding: 16px;
   border-bottom: 1px solid #ddd;
+}
+.box-lanrenzhijia {
+  margin-left: 185px;
+  position: absolute;
+}
+.preview {
+	display:block;
+	float:left;
+	width:76px;
+	height:40px;
+	margin-left:50px;
+}
+.spic {
+	padding:2px;
+	border:1px solid #ccc;
+	display:block;
+	width:76px;
+	height:40px;
+}
+#preview {
+	border-radius:5px;
+	border:1px solid #ccc;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), 0 3px 4px rgba(0, 0, 0, 0.3);
 }
