@@ -89,7 +89,7 @@ var css2 = `
 var md = `
 # 自我介绍
 
-我叫 XXX
+我叫 许珂
 1992 年 10 月出生
 湖北文理学院毕业
 自学前端半年
@@ -118,7 +118,7 @@ let css3 = `
  */
 `
 
-writeCss('', css1, ()=>{ // writeCss call the function
+writeCss('', css1, ()=>{ 
   createPaper(() => {
     writeMarkdown(md, ()=> {
       writeCss(css1, css2, ()=>{
