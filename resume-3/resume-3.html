@@ -224,9 +224,9 @@
 
     <div class="works" style="height: 597px;">
       <div class="big" style="top: 0;left: 0;">
-        <img title="多人共享博客" src="img/1.jpg" alt="作品1" id="bolg-client">
+        <img title="多人共享博客" src="img/1.jpg" alt="作品1" id="bolg-client" onmouseover="myMouseEnter()" onmouseout="myMouseOut()">
       </div>
-      <div class="myIntroduce" οnmοuseenter="myMouseEnter()"></div>
+      <div class="myIntroduce"></div>
       <div class="small" style="top: 0; left: 645px;">
         <img title="自动简历生成器" src="img/2.jpg" alt="作品2">
       </div>
@@ -326,10 +326,19 @@ for(let i=0; i<aTags.length; i++){
       */
   }
 }
-  let myIntroduce = document.querySelector('.myIntroduce')
+
   function myMouseEnter() {
-    myIntroduce.style.zIndex = '1'
+
     console.log('in')
+    let myIntroduce = document.querySelector('.myIntroduce')
+    myIntroduce.style.zIndex = '0'
+    console.log(myIntroduce)
+  }
+  function myMouseOut(){
+    let myIntroduce = document.querySelector('.myIntroduce')
+    myIntroduce.style.zIndex = '-1'
+    console.log(myIntroduce)
+    console.log('out')
   }
   </script>
   
