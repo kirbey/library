@@ -355,14 +355,15 @@ section.portfolio .works > .small {
 
 .myIntroduce{
   position: absolute;
-  border: 1px solid red;
+  border: 5px solid #E6686A;
   margin-top: 50%;
-  height: 104px;
-  width: 605px;
+  height: 94px;
+  width: 590px;
   background: #9A9DA2;
   opacity:0.3;
   display: block;
   z-index: -1;
+  border-radius: 50px;
 }
 
 
