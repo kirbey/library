@@ -1,4 +1,4 @@
-﻿// 代码整理：懒人之家
+﻿
 (function($){
 	$.fn.preview = function(){
 		var xOffset = 10;

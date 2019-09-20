@@ -353,6 +353,19 @@ section.portfolio .works > .small {
   position: absolute;
 }
 
+.introduce{
+  position: absolute;
+  border: 1px solid red;
+  margin-top: 50%;
+  height: 104px;
+  width: 605px;
+  background: #9A9DA2;
+  opacity:0.3;
+  display: block;
+  z-index: -1;
+}
+
+
 section.portfolio .works > .big > img:hover{
   transform: translateZ(50px);
   transition: all 0.5s;
