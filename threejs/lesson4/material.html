@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>圆柱体</title>
+        <script type="text/javascript" src="three.js"></script>
+        
+        <script type="text/javascript">
+            function init() {
+                var renderer = new THREE.WebGLRenderer({
+                    canvas: document.getElementById('mainCanvas')
+                });
+                renderer.setClearColor(0x000000);
+                var scene = new THREE.Scene();
+                
+                // camera
+                // canvas size is 400x300
+                var camera = new THREE.PerspectiveCamera(100, 400/300, 1, 10);
+                camera.position.set(0, 0, 5);
+                camera.lookAt(new THREE.Vector3(0, 0, 0));
+                scene.add(camera);
+                
+                // a cube in the scene
+                var cube = new THREE.Mesh(new THREE.CylinderGeometry(2, 3, 4, 18, 3, true),
+                /*(radiusTop,radiusBottom,radiusSegments,heightSegments,openEnded(是否有底面和顶面，默认false有))*/
+                        new THREE.MeshBasicMaterial({
+                            color: 0xff0000,
+                            wireframe: true
+                        })
+                );
+                scene.add(cube);
+                
+                // render
+                renderer.render(scene, camera);
+            }
+        </script>
+    </head>
+    
+    <body onload="init()">
+        <canvas id="mainCanvas" width="400px" height="300px" ></canvas>
+    </body>
+</html>
