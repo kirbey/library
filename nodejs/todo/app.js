@@ -16,7 +16,12 @@ function fetch (){
 }
 
 function display(list){
-    console.log(list)
+    for (let i = 0; i< list.length; i++){
+        const mark = list[i][1] === true ? '已完成' : '未完成'
+        console.log('任务内容: ' + list[i][0] + ' ' + mark)
+    }
+
+    
 }
 
 function addTask(list, content){
