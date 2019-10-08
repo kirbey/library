@@ -375,6 +375,15 @@ section.portfolio .works > .small> img:hover{
   transform: translateZ(50px);
   transition: all 0.5s;
 }
+section.portfolio .works > .big > img{
+  width: 624px;
+  height: 575px;
+}
+section.portfolio .works > .small > img{
+  width: 300px;
+  height: 275px;
+}
+
 section.portfolio .workLink > a{
   padding: 10px;
   background: #E6686A;
