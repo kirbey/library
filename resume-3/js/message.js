@@ -22,6 +22,7 @@
         'content': content
       })
     }
+    
   }
 
   var controller = {
